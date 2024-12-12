@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <body> 
+        
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Meu Bem. </strong>
+                        <p>
+                            Bom, como a gente se conhece a pouco tempo, ainda não tivemos de fato um date de verdade, e por isso venho por meio deste te fazer esse humilde convite!
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <a class="next-btn"href="https://restaurantemahai.com.br/" class="next-btn" style="text-decoration:none">
+        ➝
+    </a>
+
+    <script>
+        document.querySelector('.next-btn').addEventListener('click', function() {
+    window.location.href = 'https://restaurantemahai.com.br/'; // Substitua pelo link de destino
+});
+
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>

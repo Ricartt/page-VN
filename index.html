@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD+Guides&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cherry+Swash:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+QLD+Guides&family=Playwrite+BE+WAL+Guides&display=swap');
+
+        :root {
+            font-family: Arial, sans-serif;
+            margin: 5em auto 2em;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-family: Brush Script MT;
+            font-size: 1.2rem;
+            color: #000000;
+            text-align: center;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        p1 {
+
+            margin: 50px 5em 5em 5em;
+            font-family: "Cherry Swash", serif;
+            font-size: 1.0rem;
+            color: #ffffff;
+            text-align: center;
+            transition: font-size 0.5s ease-in-out;
+
+        }
+
+        /* Tornando a fonte responsiva */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-family: Brush Script MT;
+                font-size: 1rem;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                padding: 6px;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 10px;
+        }
+
+        .container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 16px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+
+            .card-content h3 {
+                font-size: 1rem;
+            }
+
+            .card-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 90%;
+            }
+
+            .card-content h3 {
+                font-size: 1rem;
+            }
+
+            .card-content p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .text-area {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .options {
+            margin-top: 20px;
+        }
+
+        .options button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .options .yes {
+            background-color: #E93D3D;
+        }
+
+        .options .no {
+            background-color: #ccc;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #E93D3D;
+            position: relative;
+            margin: 10px auto 50px;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #E93D3D;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes beat {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        .next-btn {
+            position: absolute;
+            bottom: -240px;
+            width: 50px;
+            margin: 10px auto;
+            background-color: #760d0d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .next-btn:hover {
+            background-color: #830515;
+        }
+
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 600px) {
+            .next-btn {
+                bottom: -760px;
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function handleOption(choice) {
+            if (choice === 'yes') {
+                alert('Que incrível! Prepare-se para uma jornada inesquecível.');
+                window.location.href = 'indexx.html';
+            } else if (choice === 'no') {
+                alert('Não desista do amor! Tente novamente para continuar.');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2></h2>
+        <div class="heart"></div>
+        <h1>For You My Be</h1>
+
+        <p1>Eu sei que fazem pouco tempo que te conheço, e apesar desse pouco tempo eu senti algo muito maior e
+            inexplicável, desde o primeiro dia que te vi, meus olhos brilharam novamewnte
+            foi como ver a luz no fim do túnel, e mesmo sem nunca ter te visto antes parecia que eu já te conhecia
+            antes, de alguma forma. E talvez seja...
+            <br>
+            E desde então eu não parei de pensar em voce, meus dias são baseados em qual o proxímo dia em que eu vou te
+            ver, te beijar, te sentir.
+            Seu abraço é como um lar, seus carinhos, seu cheiro pra mim é extremamente acolhedor eu moraria ali. Eu
+            posso dizer que voce me trouxe uma paz inexplicavel,
+            um lugar onde eu moraria pra sempre.
+        </p1>
+
+
+    </header>
+
+
+    <div class="container2">
+        <div class="card">
+            <img src="imagem2.JPG" alt="Foto 1">
+            <div class="card-content">
+                <h3>
+                    <h3>
+                        <p>❤️</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagem1.JPG" alt="Foto 2">
+            <div class="card-content">
+                <h3></h3>
+                <p>❤️</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagem3.JPG" alt="Foto 3">
+            <div class="card-content">
+                <h3></h3>
+                <p>❤️</p>
+            </div>
+        </div>
+
+
+        <a href="page.html" class="next-btn" style="text-decoration:none">
+            ➝
+        </a>
+    </div>
+
+    <footer>
+        Dev.Ricarte | 2024
+    </footer>
+</body>
+
+
+</html>
